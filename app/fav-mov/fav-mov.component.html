@@ -1,0 +1,28 @@
+
+<md-grid-list cols="3" rowHeight="1:2">
+ 
+<div *ngIf="movie">
+<div *ngFor="let mov of movie">
+ <md-grid-tile>
+ <md-card>
+  <md-card-header>
+    <md-card-title>{{ mov.title }}</md-card-title>
+    <md-card-subtitle>{{ mov.year }}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image class = poster-image src="{{ mov.poster_path }}" >
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
+
+</md-grid-tile>
+</div>
+</div>
+
+</md-grid-list>
+  
+
+
+
+

@@ -1,0 +1,18 @@
+<md-grid-list cols="4" rowHeight="1:2">
+<div *ngFor="let mov of movie">
+  <md-grid-tile>
+  <md-card>
+  <md-card-header>
+    <md-card-title>{{ mov.title }}</md-card-title>
+    <md-card-subtitle>{{ mov.release_date }}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image [src]="'http://image.tmdb.org/t/p/w92' + mov.poster_path">
+
+  <md-card-actions>
+    <button md-button>Save</button>
+    <button md-button>Share</button>
+  </md-card-actions>
+</md-card>
+</md-grid-tile>
+</div>
+</md-grid-list>
